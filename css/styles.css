@@ -21,16 +21,24 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+p,
+#nav-links li {
+    color: #7e7e7e;
+}
+
 /* typography */
+
+h2,
+h3 {
+    color: #1c2e53;
+}
 
 h2 {
     font-weight: 300;
     margin-bottom: 30px;
-    color: #233c70;
 }
 
 .body-text {
-    color: #7e7e7e;
     line-height: 27px;
     font-size: 19px;
 }
@@ -69,7 +77,6 @@ nav {
 }
 
 #nav-logo img {
-    padding: 0% 40% 0% 0%;
     width: 95px;
 }
 
@@ -83,6 +90,24 @@ nav {
     color: #7e7e7e;
     position: relative;
     top: -4px;
+}
+
+#nav-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    text-align: left;
+    background: white;
+    box-shadow: -18px 10px 12px -20px black;
+    padding: 30px 90px;
+}
+
+#nav-list li {
+    list-style-type: none;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 /* hero */
@@ -118,6 +143,34 @@ h1 {
     text-align: center;
     background: #fcfcfc;
     padding: 50px 20px;
+}
+
+#feature-section .body-text {
+    margin-bottom: 70px;
+}
+
+.feature-box {
+    background: white;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 14px -12px black;
+    border: 1px solid #efefef;
+}
+
+.feature-box img {
+    width: 65%;
+    margin-bottom: 30px;
+}
+
+.feature-box h3 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.feature-box p {
+    font-size: 17px;
 }
 
 
@@ -164,7 +217,54 @@ h1 {
         display: inline-block;
         padding-right: 90px;
     }
+
+    .feature-boxes-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .feature-box {
+        width: 28.5%;
+    }
+
+    /* end tablet/large mobile styles */
 }
 
+
+
 /* laptop/desktop */
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+
+    /* nav */
+    nav {
+        padding: 40px 150px 0px 150px;
+    }
+
+    #nav-list {
+        display: block;
+        position: static;
+        text-align: right;
+        box-shadow: none;
+        padding: 0px;
+    }
+
+    #nav-list li {
+        display: inline-block;
+        font-size: 18px;
+        margin-right: 18px;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+
+    /* hero */
+    #hero {
+        padding: 60px 150px;
+    }
+
+    /* features */
+    #feature-section {
+        padding: 50px 150px;
+    }
+}
