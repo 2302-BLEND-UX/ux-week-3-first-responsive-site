@@ -11,6 +11,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* -----------elements--------- */
@@ -100,14 +101,22 @@ nav {
     left: 0;
     text-align: left;
     background: white;
-    box-shadow: -18px 10px 12px -20px black;
-    padding: 30px 90px;
+    box-shadow: 0px 20px 20px -30px black;
+    padding: 15px 30px 30px 25px;
+}
+
+#nav-list.visible {
+    display: block;
 }
 
 #nav-list li {
     list-style-type: none;
     font-size: 18px;
     margin-bottom: 5px;
+}
+
+.dropdown-content {
+    display: none;
 }
 
 /* hero */
@@ -195,6 +204,10 @@ h1 {
         padding: 40px 90px 0px 90px;
     }
 
+    #nav-list {
+        padding: 30px 30px 30px 90px;
+    }
+
     /* hero */
 
     #hero {
@@ -224,7 +237,7 @@ h1 {
     }
 
     .feature-box {
-        width: 28.5%;
+        width: 32%;
     }
 
     /* end tablet/large mobile styles */
@@ -256,6 +269,33 @@ h1 {
 
     #hamburger-icon {
         display: none;
+    }
+
+    /* dropdown */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* give the dropdown, the parent element,
+    a position relative, to make it the
+    reference point, for the dropdown itself */
+    .dropdown {
+        position: relative;
+    }
+
+    /* fix glitch with before element */
+
+    .dropdown-content {
+        position: absolute;
+        top: 23px;
+        left: 0;
+        text-align: left;
+        width: 200px;
+        /* border: 1px solid black; */
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 9px 30px -20px black;
     }
 
     /* hero */
