@@ -55,6 +55,13 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* .badge:after {
+    content: "Hello";
+    display: absolute;
+    top: 0;
+    left: 0;
+} */
+
 /* buttons */
 
 .button-link {
@@ -116,7 +123,12 @@ nav {
 }
 
 .dropdown-content {
-    display: none;
+    padding-top: 4px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding: 4px 0 4px 10px;
+    margin-top: 7px;
 }
 
 /* hero */
@@ -272,6 +284,21 @@ h1 {
     }
 
     /* dropdown */
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content:after {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        /* background: grey; */
+    }
+
     .dropdown:hover .dropdown-content {
         display: block;
     }
@@ -287,7 +314,7 @@ h1 {
 
     .dropdown-content {
         position: absolute;
-        top: 23px;
+        top: 30px;
         left: 0;
         text-align: left;
         width: 200px;
